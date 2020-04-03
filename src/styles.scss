@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --theme: #a749b7;
+}
+
+@font-face {
+    font-family: "Font";
+    src: local("☺"), url("/assets/font.woff") format("woff");
+  }
+  
+  * {
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Font", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+body {
+    margin: 0;
+}
+
+.ng5-slider .ng5-slider-pointer:after,
+.ng5-slider .ng5-slider-bubble {
+    display: none !important;
+}
+
+.ng5-slider .ng5-slider-pointer {
+    background-color: #fff !important;
+    border-radius: 0 !important;
+    transform: rotate(-45deg) !important;
+    top: -13px !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.ng5-slider .ng5-slider-selection {
+    background: var(--theme) !important;
+}
+
+.ng5-slider .ng5-slider-bar {
+    background: #202020;
+    height: 7px !important;
+    box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.44);
+}

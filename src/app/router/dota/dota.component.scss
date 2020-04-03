@@ -1,0 +1,132 @@
+div.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    div.background {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    div.background::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("/assets/wallpaper.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: blur(10px) brightness(70%);
+        transform: scale(1.1);
+        z-index: -1;
+    }
+
+    div.background::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 25vw;
+        height: 25vw;
+        background-image: url("/assets/hero.png");
+        background-position-x: -5vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+        padding: 10px 5vw;
+
+        section{
+            height: 100%;
+        }
+
+        section.tabs {
+            margin-top: 5vh;
+            margin-right: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+
+            div.tab {
+                padding: 20px;
+                box-sizing: border-box;
+                border-radius: 10px;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                background-color: rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                div.image {
+                    width: 80px;
+                    height: 80px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                }
+
+                span {
+                    font-size: 20px;
+                    color: #fff;
+                    margin-right: 15px;
+                }
+            }
+
+            div.tab.active,
+            div.tab:hover {
+                border-color: var(--theme);
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        section.form {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            div.rank {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            app-number-input {
+                width: 20vw;
+                margin-right: 20px;
+            }
+
+            app-range {
+                width: 35vw;
+            }
+        }
+
+        section.order {
+            width: 400px;
+            margin-left: 50px;
+            display: flex;
+            justify-content: center;
+
+            app-order{
+                width: 100%;
+                margin-top: 10vh;
+            }
+        }
+    }
+}

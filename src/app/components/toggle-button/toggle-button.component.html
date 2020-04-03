@@ -1,0 +1,4 @@
+<label>{{label}}</label>
+<div class="container">
+    <button *ngFor="let item of labels" [class.select]="selected == item" (click)="select(item)">{{item}}</button>
+</div>

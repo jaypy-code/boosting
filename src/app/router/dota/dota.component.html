@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="background" id="background"></div>
+    <app-header></app-header>
+    <main>
+        <section class="tabs">
+            <div class="tab active">
+                <div class="image" style="background-image: url('/assets/images/rank-boosting.png');"></div>
+                <span>افزایش رتبه</span>
+            </div>
+
+            <div class="tab">
+                <div class="image" style="background-image: url('/assets/images/duo-boosting.png');"></div>
+                <span>تقویت دوگانه</span>
+            </div>
+            <div class="tab">
+                <div class="image" style="background-image: url('/assets/images/calibration-boost.png');"></div>
+                <span>تقویت کالیبراسیون</span>
+            </div>
+        </section>
+        <section class="form">
+            <div class="rank">
+                <app-dota-rank [rank]="min"></app-dota-rank>
+                <app-number-input [value]="min" [min]="1" [max]="max" (change)="set('min', $event)" label="رتبه فعلی">
+                </app-number-input>
+            </div>
+            <br>
+            <app-range [min]="1" [max]="6500" [value]="[min, max]"
+            (chnage)="set('min', $event[0]); set('max', $event[1])"></app-range>
+            <br><br>
+            <div class="rank">
+                <app-dota-rank [rank]="max"></app-dota-rank>
+                <app-number-input [value]="max" [min]="min" [max]="6500" (change)="set('max', $event)" label="رتبه مطلوب">
+                </app-number-input>
+            </div>
+            <br><br>
+            <app-toggle-button label="صف" [labels]="['Core', 'Support', 'Any']"></app-toggle-button>
+        </section>
+        <section class="order">
+            <app-order></app-order>
+        </section>
+    </main>
+</div>

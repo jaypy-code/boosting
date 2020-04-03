@@ -1,0 +1,72 @@
+div.container {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    border: 2px solid var(--theme);
+    border-radius: 5px;
+    background-color: #151515;
+    color: #fff;
+
+    div.title {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 15px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+            fill: var(--theme);
+            margin-left: 15px;
+        }
+    }
+
+    div.features {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 15px 0 15px;
+        
+        div.item {
+            position: relative;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        div.item::before {
+            content: '✔';
+            color: var(--theme);
+            margin-left: 10px;
+            margin-right: 20px;
+            font-size: 1.1rem;
+        }
+    }
+
+    div.options{
+        padding: 15px;
+        background-color: #202020;
+    }
+
+    div.price {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 15px;
+
+        button{
+            margin-right: auto;
+            background-color: var(--theme);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 120px;
+            height: 45px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        button:hover{
+            color: #151515;
+        }
+    }
+}

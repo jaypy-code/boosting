@@ -1,0 +1,10 @@
+<label>{{label}}</label>
+<div class="container">
+    <button (click)="add()">
+        <span>+</span>
+    </button>
+    <input type="number" [min]="min" [max]="max" [(ngModel)]="value" (change)="emit()">
+    <button (click)="less()">
+        <span>-</span>
+    </button>
+</div>

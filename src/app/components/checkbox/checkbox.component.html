@@ -1,0 +1,7 @@
+<div class="container">
+    <input type="checkbox" [id]="id" [value]="checked" (change)="onChange($event)">
+    <label [for]="id">
+        <span>{{label}}</span>
+        <span class="description" *ngIf="description.length != 0">{{description}}</span>
+    </label>
+</div>
