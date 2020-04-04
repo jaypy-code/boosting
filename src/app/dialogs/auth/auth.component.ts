@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-auth',
@@ -7,15 +7,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  @Input() opened: boolean = false;
-  @Output() close = new EventEmitter<boolean>();
   public mode: string = 'login';
   constructor() { }
 
   ngOnInit() {
-  }
-
-  exit() {
-    this.close.emit(false);
   }
 }

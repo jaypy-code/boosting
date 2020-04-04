@@ -8,4 +8,6 @@
         <div class="item background" (click)="opened = true">حساب کاربری</div>
     </div>
 </header>
-<app-auth [opened]="opened" (close)="opened = false"></app-auth>
+<app-dialog [opened]="opened" (close)="opened = false">
+    <app-auth></app-auth>
+</app-dialog>

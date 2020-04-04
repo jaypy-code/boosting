@@ -18,6 +18,7 @@ import { DotaRankComponent } from './components/dota-rank/dota-rank.component';
 import { OrderComponent } from './components/order/order.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { ToggleButtonComponent } from './components/toggle-button/toggle-button.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ToggleButtonComponent } from './components/toggle-button/toggle-button.
     HeaderComponent,
     ToggleButtonComponent,
     AuthComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
