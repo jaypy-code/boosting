@@ -11,7 +11,8 @@
         <span>سفارش شما</span>
     </div>
     <div class="options">
-        <app-checkbox *ngFor="let item of options" [label]="item.label" [description]="item.description"></app-checkbox>
+        <app-checkbox *ngFor="let item of options; let i = index" [id]="'checkbox-'+i" [label]="item.label"
+            [description]="item.description"></app-checkbox>
     </div>
     <div class="features">
         <div class="item">تضمین ایمنی</div>
