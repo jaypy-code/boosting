@@ -26,6 +26,8 @@ export class OrderComponent implements OnInit {
       description: '+25%'
     }
   ];
+
+  @Input() Price: Number = 0
   constructor() { }
 
   ngOnInit() {
