@@ -10,6 +10,8 @@ import { DotaComponent } from './router/dota/dota.component';
 
 import { HeaderComponent } from './includes/header/header.component';
 
+import { AuthComponent } from './dialogs/auth/auth.component';
+
 import { RangeComponent } from './components/range/range.component';
 import { NumberInputComponent } from './components/number-input/number-input.component';
 import { DotaRankComponent } from './components/dota-rank/dota-rank.component';
@@ -28,6 +30,7 @@ import { ToggleButtonComponent } from './components/toggle-button/toggle-button.
     CheckboxComponent,
     HeaderComponent,
     ToggleButtonComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
