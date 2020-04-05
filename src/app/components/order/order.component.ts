@@ -33,6 +33,13 @@ export class OrderComponent implements OnInit {
 
   @Input() Price: number = 10000
   public OrderPrice: number
+  public ChangePrice: number = 0
+  public get LastPrice() {
+
+
+
+    return this.OrderPrice + (this.ChangePrice * this.OrderPrice) / 100
+  }
   constructor() { }
 
 
@@ -40,12 +47,13 @@ export class OrderComponent implements OnInit {
   orderOptions(data: boolean, rule) {
     if (typeof data == 'boolean') {
 
-      const price = (rule * this.Price) / 100
+
       if (data) {
-        this.OrderPrice += price
+        this.ChangePrice += rule
       } else {
-        this.OrderPrice += price * -1
+        this.ChangePrice += rule * -1
       }
+
 
     }
   }
@@ -53,7 +61,7 @@ export class OrderComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges) {
 
     this.OrderPrice = (changes.Price.currentValue);
-  
+
 
   }
   ngOnInit() {
