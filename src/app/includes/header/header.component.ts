@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public open: boolean = false;
+  public opened: boolean = false;
   constructor() { }
 
-  opened = false
   ngOnInit() {
   }
 

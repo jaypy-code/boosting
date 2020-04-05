@@ -2,10 +2,10 @@ div.container {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 
     div.background {
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: 100vh;
         z-index: -1;
@@ -45,15 +45,9 @@ div.container {
         display: flex;
         flex-wrap: nowrap;
         height: 100%;
-        padding: 10px 5vw;
-
-        section{
-            height: 100%;
-        }
 
         section.tabs {
             margin-top: 5vh;
-            margin-right: 20px;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -119,14 +113,86 @@ div.container {
 
         section.order {
             width: 400px;
-            margin-left: 50px;
+            margin-left: 0;
             display: flex;
             justify-content: center;
 
-            app-order{
+            app-order {
                 width: 100%;
                 margin-top: 10vh;
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1401px) {
+    main {
+        padding: 10px 5vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    main {
+        padding: 10px 2vw;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    main {
+        flex-wrap: wrap !important;
+        align-items: center;
+
+        section.tabs {
+            width: 100vw !important;
+            height: auto !important;
+            justify-content: center;
+            align-items: center;
+
+            div.tab {
+                max-width: 300px;
+                min-width: 250px;
+            }
+        }
+
+        section.form {
+            margin-right: 3vw !important;
+            width: 50vw;
+        }
+
+        section.order {
+            margin-left: 3vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    section {
+        width: 100vw !important;
+        height: auto !important;
+    }
+
+    section.order {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.form {
+        align-items: flex-start !important;
+
+        app-dota-rank,
+        app-number-input,
+        app-range {
+            transform: scale(0.7);
+        }
+
+        app-dota-rank {
+            margin-left: -50px;
+        }
+
+        app-range {
+            margin: -40px 0;
+            width: 100% !important;
         }
     }
 }

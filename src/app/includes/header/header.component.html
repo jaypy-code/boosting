@@ -7,7 +7,20 @@
 
         <div class="item background" (click)="opened = true">حساب کاربری</div>
     </div>
+    <div class="menu-toggle" (click)="open = !open">
+        <svg *ngIf="open == false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/></svg>
+        <svg *ngIf="open == true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z"/></svg>
+    </div>
 </header>
+<section class="menu" [ngClass]="{'open': open}">
+    <div class="menu">
+        <div class="item">قیمت ها</div>
+        <div class="item">تماس با ما</div>
+        <div class="item">درباره ما</div>
+
+        <div class="item background" (click)="opened = true; open = false">حساب کاربری</div>
+    </div>
+</section>
 <app-dialog [opened]="opened" (close)="opened = false">
     <app-auth></app-auth>
 </app-dialog>
