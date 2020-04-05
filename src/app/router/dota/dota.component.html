@@ -18,7 +18,7 @@
             </div>
             <br>
             <app-range [min]="1" [max]="6500" [value]="[min, max]"
-                (chnage)="set('min', $event[0]); set('max', $event[1])"></app-range>
+                (chnage)="Seter($event)"></app-range>
             <br><br>
             <div class="rank">
                 <app-dota-rank [rank]="max"></app-dota-rank>
@@ -30,7 +30,7 @@
             <app-toggle-button label="صف" [labels]="['Core', 'Support', 'Any']"></app-toggle-button>
         </section>
         <section class="order">
-            <app-order></app-order>
+            <app-order [Price]="price"></app-order>
         </section>
     </main>
 </div>

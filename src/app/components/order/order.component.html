@@ -11,7 +11,8 @@
         <span>سفارش شما</span>
     </div>
     <div class="options">
-        <app-checkbox *ngFor="let item of options; let i = index" [label]="item.label" [description]="item.description" [id]="i"></app-checkbox>
+        <app-checkbox *ngFor="let item of options; let i = index" [id]="'checkbox-'+i" [label]="item.label"
+            [description]="item.description" (change)="orderOptions($event, item.rule)"></app-checkbox>
     </div>
     <div class="features">
         <div class="item">تضمین ایمنی</div>
@@ -19,7 +20,7 @@
         <div class="item">24/7 پشتیبانی زنده</div>
     </div>
     <div class="price">
-        <span> {{price}} ریال</span>
+        <span> {{OrderPrice | currency:'IRR':' ریال '}}  </span>
         <button>تقویت کن</button>
     </div>
 </div>
