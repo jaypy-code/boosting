@@ -13,9 +13,11 @@ export class DotaComponent implements OnInit {
   public max: number = 200;
   public price: number = 0;
 
+  public selectedTab = 0
   public tabs = [{
     name: "افزایش MMR",
     image: "/assets/images/rank-boosting.png"
+    
 
   }]
   public prices = [
