@@ -41,5 +41,6 @@ body {
 .ng5-slider .ng5-slider-bar {
     background: #202020;
     height: 7px !important;
+    width: calc(100% - 10px) !important;
     box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.44);
 }

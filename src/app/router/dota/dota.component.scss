@@ -166,6 +166,10 @@ div.container {
 }
 
 @media only screen and (max-width: 1080px) {
+    div.background::after {
+        display: none;
+    }
+    
     section {
         width: 100vw !important;
         height: auto !important;
@@ -178,21 +182,19 @@ div.container {
 
 @media only screen and (max-width: 600px) {
     section.form {
-        align-items: flex-start !important;
+        align-items: center !important;
 
-        app-dota-rank,
-        app-number-input,
-        app-range {
-            transform: scale(0.7);
+        div.rank {
+            width: 100%;
+            justify-content: center;
+
+            app-number-input {
+                width: auto !important;
+            }
         }
 
-        app-dota-rank {
-            margin-left: -50px;
-        }
-
         app-range {
-            margin: -40px 0;
-            width: 100% !important;
+            width: 250px !important;
         }
     }
 }

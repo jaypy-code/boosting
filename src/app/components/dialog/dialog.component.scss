@@ -8,7 +8,7 @@ div.container {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    z-index: 5;
+    z-index: 12;
 
     div.overlay {
         position: absolute;
@@ -67,5 +67,21 @@ div.container {
 
     100% {
         transform: scale(1);
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    div.content {
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+        border-radius: 0 !important;
+        border-width: 0 !important;
+    }
+
+    button.close {
+        top: 4px !important;
+        right: 4px !important;
     }
 }
